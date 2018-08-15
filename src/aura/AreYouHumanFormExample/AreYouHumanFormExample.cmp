@@ -1,0 +1,52 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!--This is the event that needs to be registered.  It will be fired from the component once the
+    appropriate number is entered by a user -->
+    <aura:handler name="SendHumanResult" action="{!c.verifiedResult}" event="c:HumanCheck" />
+    
+    <aura:attribute name="firstName" type="String" default="" />
+    <aura:attribute name="lastName" type="String" default="" />
+    <aura:attribute name="verified" type="Boolean" default="false" />
+    
+    <div>
+    
+        <article class="slds-card slds-theme_default">
+        	<div aura:id="mainForm">
+            	<div class="customHeader">
+                	Are You Human - Form Example
+                </div>
+                <div class="slds-grid slds-wrap slds-grid_align-center">
+                	<div class="slds-col slds-size_1-of-1 slds-text-longform" style="padding-bottom: 1%; padding-left: 1%">
+                    	This is a simple form that uses the Are You Human component before allowing submission. Note: no information is actually saved
+                        or sent anywhere.
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-grid slds-wrap slds-box" 
+                         style="padding-bottom: 2%; margin-bottom: 1%; margin-left: 1%; margin-right: 1%">
+                    	<div class="slds-col slds-size_1-of-1 slds-text-heading_medium" style="padding-bottom: 1%">
+                        	Personal Information
+                        </div>
+                        <div class="slds-col slds-size_3-of-6 slds-align-middle" style="padding-right: 1%">
+                            <ui:inputText label="First Name" value="{!v.firstName}" placeholder="Enter first name" />
+                        </div>
+                        <div class="slds-col slds-size_3-of-6 slds-align-middle" style="padding-right: 1%">
+                            <ui:inputText label="Last Name" value="{!v.lastName}" placeholder="Enter last name" />
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-grid slds-wrap slds-grid_align-center customFooter">
+                    	<div class="slds-col slds-size_1-of-2">
+                            <c:AreYouHuman />
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-align_absolute-center">
+                            <lightning:button variant="brand" label="Submit Example" onclick="{!c.submitExample}"
+                                              class="slds-button slds-button_brand" disabled="{!v.verified==false}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+    
+</aura:component>

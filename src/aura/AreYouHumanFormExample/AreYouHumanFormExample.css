@@ -1,0 +1,22 @@
+.THIS .customFooter {
+    border-top: 2px solid rgb(220, 220, 220);
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    padding: .75rem 1rem;
+    background-color: rgb(240, 240, 240);
+}
+
+.THIS .customHeader {
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-right: 1%;
+    font-size: 16px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: rgb(240, 240, 240);
+}
+
+.THIS .slds-card {
+    border: none !important;
+}
