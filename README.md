@@ -9,7 +9,7 @@ To begin using the component, you only need to complete 3 steps:
 
 That's it!  In the source code example, the AreYouHuman component controls enabling the submit button and the event handler is as simple as this:
 
-```
+```javascript
 var ayhResult = event.getParam("result");
 component.set("v.verified", ayhResult);
 ```
