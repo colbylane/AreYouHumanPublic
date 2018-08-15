@@ -14,4 +14,4 @@ var ayhResult = event.getParam("result");
 component.set("v.verified", ayhResult);
 ```
 
-You can of course add your own logic as you see fit, but if you're new to Lightning just learning this will help get you up and going quickly.
+You can of course add your own logic as you see fit, but you can always copy/paste the example to get going.
